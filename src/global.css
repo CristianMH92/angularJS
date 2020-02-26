@@ -1,0 +1,18 @@
+.main_container{
+    background-color: aqua;
+    padding: 10%;
+}
+button {
+    width: 10vh;
+    height: 10vh;
+    border-radius: 5px;
+}
+.button_back {
+    background-color: wheat;
+}
+.power_button {
+    background-color: lightseagreen;        
+}
+.settings_button {
+    background-color: lightcoral;
+}
