@@ -16,3 +16,9 @@ button {
 .settings_button {
     background-color: lightcoral;
 }
+
+.info_power {
+    margin: 40%;
+    color: wheat;
+    background-color: tomato;
+}

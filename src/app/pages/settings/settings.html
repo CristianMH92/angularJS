@@ -6,39 +6,49 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Settings</h1>
-    <span>RAM</span>
-    <select id="select_ram" ng-model="ramModel"  ng-options="ramElement.name for ramElement in ramData" value="{{ramModel.name}}" ng-click="ram()" ng-change="selectOption($event$event)">
-        <option value="">-- Elige RAM --</option>
-    </select>
-    <span>{{ramModel.name}}</span>
+    <h1 ng-show="statusShowInfo">Settings</h1>
+    <h1 ng-show="statusSettings">Bios Info</h1>
+    <div class="settings_class" ng-show="statusSettings">
+        <span>RAM</span>
+        <select id="select_ram" ng-model="ramModel"  ng-options="ramElement.name for ramElement in ramData" value="{{ramModel.name}}" ng-click="ram()" ng-change="selectOption($event$event)">
+            <option value="">-- Elige RAM --</option>
+        </select>
+        <span>{{ramModel.name}}</span>
+    </div>
     <br>
-    <span>{{ramSelectedModel.name}}</span>
+    <span ng-show="statusShowInfo" class="info_power">{{ramSelectedModel.name}}</span>
+    <br>    
+
+    <div class="settings_class" ng-show="statusSettings">
+        <span>HDD</span>
+        <select id="select_hdd" ng-model="hddModel"  ng-options="hddElement.name for hddElement in hddData " ng-click="hdd()" ng-change="selectOption($event)">
+            <option value="">-- Elige HDD --</option>
+        </select>
+        <span>{{hddModel.name}}</span>
+    </div>    
     <br>
-    <span>HDD</span>
-    <select id="select_hdd" ng-model="hddModel"  ng-options="hddElement.name for hddElement in hddData " ng-click="hdd()" ng-change="selectOption($event)">
-        <option value="">-- Elige HDD --</option>
-    </select>
-    <span>{{hddModel.name}}</span>
+    <span ng-show="statusShowInfo" class="info_power">{{hddSelectedModel.name}}</span>
     <br>
-    <span >{{hddSelectedModel.name}}</span>
-    <br>  
+    <div class="settings_class" ng-show="statusSettings">
     <span>Procesador</span>
-    <select id="select_processor" ng-model="processorModel"  ng-options="processorsElement.name for processorsElement in processorsData" ng-click="processor()" ng-change="selectOption($event)">
-        <option value="">-- Elige Procesador --</option>
-    </select>
-    <span>{{processorModel.name}}</span>
+        <select id="select_processor" ng-model="processorModel"  ng-options="processorsElement.name for processorsElement in processorsData" ng-click="processor()" ng-change="selectOption($event)">
+            <option value="">-- Elige Procesador --</option>
+        </select>
+        <span>{{processorModel.name}}</span>
+    </div>
     <br>
-    <span>{{processorSelectedModel.name}}</span>
-    <!-- ng-show="mostrarInfo" -->
+    <span ng-show="statusShowInfo" class="info_power">{{processorSelectedModel.name}}</span>
+
+    <div class="settings_class" ng-show="statusSettings">
+        <br>
+        <span>Tarjeta Gráfica</span>
+        <select id="select_graphic" ng-model="graphicModel"  ng-options="graphicElement.name for graphicElement in graphicData" ng-click="graphic()" ng-change="selectOption($event)">
+            <option value="">-- Elige Tarjeta Gráfica --</option>
+        </select>
+        <span>{{graphicModel.name}}</span>
+    </div>
     <br>
-    <span>Tarjeta Gráfica</span>
-    <select id="select_graphic" ng-model="graphicModel"  ng-options="graphicElement.name for graphicElement in graphicData" ng-click="graphic()" ng-change="selectOption($event)">
-        <option value="">-- Elige Tarjeta Gráfica --</option>
-    </select>
-    <span>{{graphicModel.name}}</span>
-    <br>
-    <span>{{graphicSelectedModel.name}}</span>
+    <span ng-show="statusShowInfo" class="info_power">{{graphicSelectedModel.name}}</span>
     <br>
     <button ng-click="computerReturnPower()" class="button_back">Regreso</button>
 </body>

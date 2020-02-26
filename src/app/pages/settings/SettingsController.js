@@ -8,9 +8,15 @@ app.controller('SettingsController', function ($scope, ComputerService, ValuesDe
     $scope.processorSelectedModel = ValuesDefaultServices.valueProcessorDefault
     $scope.graphicModel = {}
     $scope.graphicSelectedModel = ValuesDefaultServices.valueGraphicDefault
+    $scope.statusSettings = ComputerService.getSettingsStatus()
+    $scope.statusShowInfo = ComputerService.getShowInfo()
 
     $scope.computerReturnPower = function(){
-        $location.path('/power')        
+        $location.path('/power')
+        var valuePowerButton = ComputerService.getComputerStatus()
+        if (valuePowerButton === false) {
+            ComputerService.toogleShowInfo()
+         } 
     }
     $scope.ram = function() {   
         RequestService[0].success(function(data){
@@ -33,7 +39,6 @@ app.controller('SettingsController', function ($scope, ComputerService, ValuesDe
         })
    }
    $scope.selectOption = function ($event) { 
-      //console.log($scope.ramModel)
       var componentSelect = event.target.id
       console.log(componentSelect);
       switch (componentSelect) {

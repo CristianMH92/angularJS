@@ -1,9 +1,9 @@
 app.factory('ValuesDefaultServices', function () {
     return {
-        valueRamDefault: {},
-        valueHddDefault: {},
-        valueProcessorDefault: {},
-        valueGraphicDefault: {},
+        valueRamDefault: {"name":"Sentinel-class landing craft","model":"Sentinel-class landing craft","manufacturer":"Sienar Fleet Systems, Cyngus Spaceworks","cost_in_credits":"240000","length":"38","max_atmosphering_speed":"1000","crew":"5","passengers":"75","cargo_capacity":"180000","consumables":"1 month","hyperdrive_rating":"1.0","MGLT":"70","starship_class":"landing craft","pilots":[],"films":["https://swapi.co/api/films/1/"],"created":"2014-12-10T15:48:00.586000Z","edited":"2014-12-22T17:35:44.431407Z","url":"https://swapi.co/api/starships/5/"},
+        valueHddDefault: {"name":"TIE/LN starfighter","model":"Twin Ion Engine/Ln Starfighter","manufacturer":"Sienar Fleet Systems","cost_in_credits":"unknown","length":"6.4","max_atmosphering_speed":"1200","crew":"1","passengers":"0","cargo_capacity":"65","consumables":"2 days","vehicle_class":"starfighter","pilots":[],"films":["https://swapi.co/api/films/2/","https://swapi.co/api/films/3/","https://swapi.co/api/films/1/"],"created":"2014-12-10T16:33:52.860000Z","edited":"2014-12-22T18:21:15.606149Z","url":"https://swapi.co/api/vehicles/8/"},
+        valueProcessorDefault: {"name":"Trandoshan","classification":"reptile","designation":"sentient","average_height":"200","skin_colors":"brown, green","hair_colors":"none","eye_colors":"yellow, orange","average_lifespan":"unknown","homeworld":"https://swapi.co/api/planets/29/","language":"Dosh","people":["https://swapi.co/api/people/24/"],"films":["https://swapi.co/api/films/2/"],"created":"2014-12-15T13:07:47.704000Z","edited":"2014-12-20T21:36:42.151000Z","url":"https://swapi.co/api/species/7/"},
+        valueGraphicDefault: {"name":"Dagobah","rotation_period":"23","orbital_period":"341","diameter":"8900","climate":"murky","gravity":"N/A","terrain":"swamp, jungles","surface_water":"8","population":"unknown","residents":[],"films":["https://swapi.co/api/films/2/","https://swapi.co/api/films/6/","https://swapi.co/api/films/3/"],"created":"2014-12-10T11:42:22.590000Z","edited":"2014-12-20T20:58:18.425000Z","url":"https://swapi.co/api/planets/5/"},
 
     }
 });
