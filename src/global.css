@@ -1,6 +1,9 @@
+* {
+    color: rgb(216, 216, 216);
+}
 .main_container{
-    background-color: aqua;
-    padding: 10%;
+    background-color: rgb(29, 29, 29);
+    padding: 5%;
 }
 button {
     width: 10vh;
@@ -8,7 +11,7 @@ button {
     border-radius: 5px;
 }
 .button_back {
-    background-color: wheat;
+    background-color: purple;
 }
 .power_button {
     background-color: lightseagreen;        
@@ -18,7 +21,5 @@ button {
 }
 
 .info_power {
-    margin: 40%;
-    color: wheat;
     background-color: tomato;
 }

@@ -16,6 +16,7 @@ app.controller('SettingsController', function ($scope, ComputerService, ValuesDe
         var valuePowerButton = ComputerService.getComputerStatus()
         if (valuePowerButton === false) {
             ComputerService.toogleShowInfo()
+            ComputerService.getSettingsStatus()
          } 
     }
     $scope.ram = function() {   
