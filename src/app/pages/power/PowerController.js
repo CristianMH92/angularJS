@@ -7,20 +7,19 @@ app.controller('PowerController', function ($scope, ComputerService, $location) 
         elementos.disabled = false 
 
         if (valuePowerButton) {        
-            console.log("Se apago");    
+            console.log("Se apago");
+            ComputerService.settingsStatus = false    
             ComputerService.toogleComputer()
         } else if (valuePowerButton === false && valueShowInfo === false) {
             console.log("Se prendio");
             ComputerService.toogleComputer() 
             $location.path('/settings')            
             ComputerService.toogleShowInfo()                       
-        } else{
+        } else { 
             console.log("otro caso");
-            console.log(valuePowerButton);
-            
-            ComputerService.toogleSettings()
+            ComputerService.toogleComputer()
+            //ComputerService.toogleSettings()
             $location.path('/settings')
-            ComputerService.toogleSettings()
         } 
     },
     $scope.goSettings = function () {

@@ -4,6 +4,7 @@
 .main_container{
     background-color: rgb(29, 29, 29);
     padding: 5%;
+    height: 80vh;
 }
 button {
     width: 10vh;

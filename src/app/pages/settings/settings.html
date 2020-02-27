@@ -10,7 +10,7 @@
     <h1 ng-show="statusSettings">Bios Info</h1>
     <div class="settings_class" ng-show="statusSettings">
         <span>RAM</span>
-        <select id="select_ram" ng-model="ramModel"  ng-options="ramElement.name for ramElement in ramData" value="{{ramModel.name}}" ng-click="ram()" ng-change="selectOption($event$event)">
+        <select id="select_ram" ng-model="ramModel"  ng-options="ramElement.name for ramElement in ramData" value="{{ramModel.name}}" ng-click="ram()" ng-change="selectOption($event)">
             <option value="">-- Elige RAM --</option>
         </select>
         <span>{{ramModel.name}}</span>

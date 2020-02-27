@@ -16,7 +16,7 @@ app.controller('SettingsController', function ($scope, ComputerService, ValuesDe
         var valuePowerButton = ComputerService.getComputerStatus()
         if (valuePowerButton === false) {
             ComputerService.toogleShowInfo()
-            ComputerService.getSettingsStatus()
+            ComputerService.toogleSettings()
          } 
     }
     $scope.ram = function() {   
@@ -41,7 +41,7 @@ app.controller('SettingsController', function ($scope, ComputerService, ValuesDe
    }
    $scope.selectOption = function ($event) { 
       var componentSelect = event.target.id
-      console.log(componentSelect);
+      console.log($scope.ramModel);
       switch (componentSelect) {
         case 'select_ram':
             ValuesDefaultServices.valueRamDefault = $scope.ramModel
