@@ -41,27 +41,27 @@ app.controller('SettingsController', function ($scope, ComputerService, ValuesDe
    }
    $scope.selectOption = function ($event) { 
       var componentSelect = event.target.id
-      console.log($scope.ramModel);
+
       switch (componentSelect) {
         case 'select_ram':
             ValuesDefaultServices.valueRamDefault = $scope.ramModel
             $scope.ramSelectedModel = ValuesDefaultServices.valueRamDefault
-            console.log('ram');              
+                        
             break;
         case 'select_hdd':
             ValuesDefaultServices.valueHddDefault = $scope.hddModel
             $scope.hddSelectedModel = ValuesDefaultServices.valueHddDefault
-            console.log('hdd');              
+                        
             break;
         case 'select_processor':
             ValuesDefaultServices.valueProcessorDefault = $scope.processorModel
             $scope.processorSelectedModel = ValuesDefaultServices.valueProcessorDefault
-            console.log('processor');              
+                         
             break;
         case 'select_graphic':
             ValuesDefaultServices.valueGraphicDefault = $scope.graphicModel
             $scope.graphicSelectedModel = ValuesDefaultServices.valueGraphicDefault
-            console.log('graphic');              
+                       
             break; 
           default:
               break;

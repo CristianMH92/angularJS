@@ -5,20 +5,21 @@ app.controller('PowerController', function ($scope, ComputerService, $location) 
         var valueShowInfo = ComputerService.getShowInfo()
         var elementos = document.getElementById("button_settings")      
         elementos.disabled = false 
+        elementos.className = "mystyle";
 
         if (valuePowerButton) {        
-            console.log("Se apago");
+            
             ComputerService.settingsStatus = false    
             ComputerService.toogleComputer()
         } else if (valuePowerButton === false && valueShowInfo === false) {
-            console.log("Se prendio");
+            
             ComputerService.toogleComputer() 
             $location.path('/settings')            
             ComputerService.toogleShowInfo()                       
         } else { 
-            console.log("otro caso");
+            
             ComputerService.toogleComputer()
-            //ComputerService.toogleSettings()
+            
             $location.path('/settings')
         } 
     },

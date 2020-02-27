@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+<div class="container_settings">
     <h1 ng-show="statusShowInfo">Settings</h1>
     <h1 ng-show="statusSettings">Bios Info</h1>
     <div class="settings_class" ng-show="statusSettings">
@@ -51,5 +44,4 @@
     <span ng-show="statusShowInfo" class="info_power">{{graphicSelectedModel.name}}</span>
     <br>
     <button ng-click="computerReturnPower()" class="button_back">Regreso</button>
-</body>
-</html>
+</div>

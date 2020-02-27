@@ -2,9 +2,21 @@
     color: rgb(216, 216, 216);
 }
 .main_container{
+    display: flex;
     background-color: rgb(29, 29, 29);
-    padding: 5%;
-    height: 80vh;
+    height: 80vh;    
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.container_power{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+} 
+.title_power{
+    justify-self: flex-end;
+    
 }
 button {
     width: 10vh;
@@ -15,12 +27,24 @@ button {
     background-color: purple;
 }
 .power_button {
+    flex: 1 0 50%;
     background-color: lightseagreen;        
 }
 .settings_button {
-    background-color: lightcoral;
+    flex: 1 0 50%;
+    background-color: grey;
 }
 
 .info_power {
     background-color: tomato;
+}
+.container_settings {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.mystyle{
+    flex: 1 0 50%;
+    background-color: lightcoral;
 }
