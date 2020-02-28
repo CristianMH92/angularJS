@@ -10,7 +10,16 @@ app.controller('SettingsController', function ($scope, ComputerService, ValuesDe
     $scope.graphicSelectedModel = ValuesDefaultServices.valueGraphicDefault
     $scope.statusSettings = ComputerService.getSettingsStatus()
     $scope.statusShowInfo = ComputerService.getShowInfo()
+    $scope.statusPowerButton = ComputerService.computerStatus
+    $scope.expression = true
 
+    /* Watch */
+    $scope.$watch('statusPowerButton', function(newValue,oldValue){
+                   if(newValue){
+                       console.log('Prendido'); 
+                       $scope.expression = !$scope.expression                      
+                   }        
+    })
     $scope.computerReturnPower = function(){
         $location.path('/power')
         var valuePowerButton = ComputerService.getComputerStatus()

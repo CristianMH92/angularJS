@@ -1,5 +1,5 @@
 app.controller('PowerController', function ($scope, ComputerService, $location) {   
-   
+    $scope.valueTextPowerButton = 'POWER'
     $scope.computerStatusOne = function(){  
         var valuePowerButton = ComputerService.getComputerStatus()
         var valueShowInfo = ComputerService.getShowInfo()
@@ -30,5 +30,26 @@ app.controller('PowerController', function ($scope, ComputerService, $location) 
             ComputerService.toogleSettings()
             ComputerService.toogleShowInfo()
         }                            
-    }
+    },
+    $scope.change_inner = function () {        
+        if ($scope.valueTextPowerButton = 'POWER') {
+            
+            $scope.valueTextPowerButton = 'I / O'
+        } else {
+            $scope.valueTextPowerButton = 'POWER'
+        }
+        
+        
+    },
+    /* Watch */
+    $scope.$watch('valueTextPowerButton', function(newValue,oldValue){
+        console.log(newValue, oldValue);
+        
+        var botonEncendido = document.getElementById("power_button_id")
+        if(newValue === 'POWER'){
+            botonEncendido.className = "power_button"
+        } else if(newValue === 'I / O') {            
+            botonEncendido.className = "mystyle"         
+        }
+    })
 });

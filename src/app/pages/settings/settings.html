@@ -1,6 +1,7 @@
 <div class="container_settings">
     <h1 ng-show="statusShowInfo">Settings</h1>
     <h1 ng-show="statusSettings">Bios Info</h1>
+    <h2 ng-show="expression">La PC se encuentra apagada, puede editar sus componentes</h2>
     <div class="settings_class" ng-show="statusSettings">
         <span>RAM</span>
         <select id="select_ram" ng-model="ramModel"  ng-options="ramElement.name for ramElement in ramData" value="{{ramModel.name}}" ng-click="ram()" ng-change="selectOption($event)">

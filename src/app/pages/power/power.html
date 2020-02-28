@@ -1,5 +1,5 @@
 <div class="container_power">
     <h1 class="title_power">Página de Encendido</h1>
-    <button class="power_button" ng-click="computerStatusOne()">POWER</button>
+    <button ng-model="valueTextPowerButton" id="power_button_id" class="power_button" ng-mouseover="change_inner()" ng-click="computerStatusOne()">{{valueTextPowerButton}}</button>
     <button id="button_settings" class="settings_button" ng-click="goSettings()" disabled>Settings</button>
 </div>
