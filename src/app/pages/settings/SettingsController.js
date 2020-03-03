@@ -1,6 +1,15 @@
 app.controller('SettingsController', function ($scope, ComputerService, ValuesDefaultServices, $location, RequestService) {
 
     $scope.ramModel = {}
+    $scope.$watch("ramModel", function (newValue, oldValue){
+        if (newValue === oldValue) {
+            console.log("Sigue el mismo") 
+        } else {
+            console.log("Nuevo Valor")             
+            var drop = document.getElementById("option-selected")       
+            drop.className = "color-dropdown";
+        }
+    })
     $scope.ramSelectedModel = ValuesDefaultServices.valueRamDefault
     $scope.hddModel = {}
     $scope.hddSelectedModel = ValuesDefaultServices.valueHddDefault

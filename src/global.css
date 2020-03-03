@@ -48,3 +48,7 @@ button {
     flex: 1 0 50%;
     background-color: lightcoral;
 }
+
+.color-dropdown {
+    color: aqua;
+}

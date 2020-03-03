@@ -36,7 +36,7 @@ app.controller('PowerController', function ($scope, ComputerService, $location) 
             
             $scope.valueTextPowerButton = 'I / O'
         } else {
-            $scope.valueTextPowerButton = 'POWER'
+            $scope.valueTextPowerButton = ' '
         }
         
         
